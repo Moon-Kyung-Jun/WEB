@@ -3,23 +3,69 @@
 <head>
     <title>WEB2 - CSS</title>
     <meta charset="utf-8">
+    <style>
+        a{
+            color:black;
+            text-decoration:none;
+        }
+        div.category{
+            text-align:center;
+        }
+        ol.category{
+            display: inline-block;
+            text-align:left;
+        }
+    </style>
 </head>
 <body>
-    <h1><a href="index.html">PATH</a></h1>
-    <ol>
-        <li><a href="1_web.html">WEB</a></li>
-        <ol type="A">
-            <li><a href="1_1_html.html">HTML</a></li>
-            <li><strong><a href="1_2_css.html">CSS</a></strong></li>
-            <li><a href="1_3_javascript.html">JavaScript</a></li>
+    <h1 style="font-size:45px; text-align:center"><a href="index.html">PATH</a></h1>
+    <div class="category">
+    <ol  class="category">
+            <li><a href="1_web.html">WEB</a></li>
+            <ol type="A">
+                <li><a href="1_1_html.html">HTML</a></li>
+                <li><strong><a href="1_2_css.html">CSS</a></strong></li>
+                <li><a href="1_3_javascript.html">JavaScript</a></li>
+            </ol>
+    <!--
+            <ol type="A">
+                <li><a href="1_1_html.html"><font color="red">HTML</font></a></li>
+                <li><strong><a href="1_2_css.html"><font color="red">CSS</font></a></strong></li>
+                <li><a href="1_3_javascript.html"><font color="red">JavaScript</font></a></li>
+            </ol>
+    -->
+            <li><a href="2_app.html">APP</a></li>
+            <li><a href="3_game.html">Game</a></li>
+            <li><a href="4_security.html">Security</a></li>
+            <li><a href="5_data.html">Data</a></li>
+            <li><a href="6_ai.html">AI</a></li>
+            <li><a href="7_others.html">Others</a></li>
         </ol>
-        <li><a href="2_app.html">APP</a></li>
-        <li><a href="3_game.html">Game</a></li>
-        <li><a href="4_security.html">Security</a></li>
-        <li><a href="5_data.html">Data</a></li>
-        <li><a href="6_ai.html">AI</a></li>
-        <li><a href="7_others.html">Others</a></li>
-    </ol>
-    <h2>CSS</h2>
+    </div>
+    <div>
+        <h1>CSS</h1>
+        <h2>How</h2>
+        <p>생활코딩</p>
+        <h2>What</h2>
+        <ol>
+            <li>head에 style tag</li>
+            <li>body에 style property</li>
+            <li>color:</li>
+            <li>text-decoration:</li>
+            <li>font-size:npx</li>
+            <li>text-align:center</li>
+            <li></li>
+
+        </ol>
+        <h2>Check</h2>
+        <ul>
+            <li><a href="https://www.youtube.com/watch?v=Ok0bBJPtgJI&list=PLuHgQVnccGMAnWgUYiAW2cTzSBywFO75B&index=1" style="color:blue">Source Link</a></li>
+        </ul>
+        <h2>Q&A</h2>
+        <ul type="Q">
+            <li>문장 중간 글자 색 변경</li>
+            <li>list 중앙 정렬<br>  div.class, ol.class 사용</li>
+        </ul>
+    </div>    
 </body>
 </html>
