@@ -23,7 +23,86 @@
         <li><a href="7_others.html">Others</a></li>
     </ol>
     <div>
+    <!--
+    <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    /*document.querySelector('a').style.color = 'white';*/
+    ">
+    <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    /* document.querySelector('li').style.color = 'black';*/
+    ">
+    -->
+    <input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if (this.value === 'night') {/*document.querySelector('#night_day') = this*/
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+        
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            alist[i].style.color = 'white';
+            i = i + 1;
+        }
+    }
+    else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+
+        
+        var alist=document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            alist[i].style.color='black';
+            i=i+1;
+        }
+    }">
     <h1>JavaScript</h1>
+    <h2>How</h2>
+    <p>생활코딩</p>
+    <h2>What</h2>
+    <ol>
+        <li>script tag: start JavaScript</li>
+        <li>alert</li>
+        <li>event(trigger)</li>
+    </ol>
+    <h2>Check</h2>
+    <h2>Q&A</h2>
+    <h2>Search</h2>
+    <ul>
+        <li>How to change font color of 'a' tag?</li>
+    </ul>
+    <input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if (this.value === 'night') {
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+
+        var alist=document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            alist[i].style.color='white';
+            i=i+1;
+        }
+    }
+    else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+        
+        var alist=document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            alist[i].style.color='black';
+            i=i+1;
+        }
+    }">
     </div>
     </div>
 </body>
