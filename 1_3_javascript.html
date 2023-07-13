@@ -4,6 +4,41 @@
     <title>WEB3 - JavaScript</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <script>
+        var Links = {
+            setColor: function(color){
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                 while(i < alist.length){
+                    alist[i].style.color = color;
+                    i = i + 1;
+                }
+            }
+        }
+        var Body = {
+            setColor: function(color){
+                document.querySelector('body').style.color = color;
+            },
+            setBackgroundColor: function(color){
+                document.querySelector('body').style.backgroundColor=color;
+            }
+        }
+        function NightDayHandler(self){
+        var target = document.querySelector('body');
+            if (self.value === 'night') {/*document.querySelector('#night_day') = this*/
+                Body.setBackgroundColor('black');
+                Body.setColor('white');
+                self.value = 'day';
+                Links.setColor('white');
+            }
+            else {
+                Body.setBackgroundColor('white');
+                Body.setColor('black');
+                self.value = 'night';
+                Links.setColor('black');
+            }
+        }
+    </script>
 </head>
 <body>
     <h1 class="title"><a href="index.html">PATH</a></h1>
@@ -36,32 +71,7 @@
     ">
     -->
     <input type="button" value="night" onclick="
-    var target = document.querySelector('body');
-    if (this.value === 'night') {/*document.querySelector('#night_day') = this*/
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
-        this.value = 'day';
-        
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-            alist[i].style.color = 'white';
-            i = i + 1;
-        }
-    }
-    else {
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
-        this.value = 'night';
-
-        
-        var alist=document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-            alist[i].style.color='black';
-            i=i+1;
-        }
-    }">
+    NightDayHandler(this)">
     <h1>JavaScript</h1>
     <h2>How</h2>
     <p>생활코딩</p>
@@ -78,31 +88,7 @@
         <li>How to change font color of 'a' tag?</li>
     </ul>
     <input type="button" value="night" onclick="
-    var target = document.querySelector('body');
-    if (this.value === 'night') {
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
-        this.value = 'day';
-
-        var alist=document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-            alist[i].style.color='white';
-            i=i+1;
-        }
-    }
-    else {
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
-        this.value = 'night';
-        
-        var alist=document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-            alist[i].style.color='black';
-            i=i+1;
-        }
-    }">
+    NightDayHandler(this)">
     </div>
     </div>
 </body>
